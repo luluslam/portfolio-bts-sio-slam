@@ -14,12 +14,16 @@ Ce dépôt regroupe mes projets, compétences et réalisations en lien avec l’
 ---
 
 ## 🛠️ Compétences techniques
-- **Langages** : PHP, Java, JavaScript, HTML5, SQL  
+- **Langages et programmation** : Java (POO, JUnit, SonarQube), PHP, HTML, CSS, JavaScript, Python, SQL (MySQL, MariaDB, SQL Server, SQLite), XML, PowerShell
+- **Outils & Environnements de développement** : Eclipse, Android Studio, Visual Studio Code, Sublime Text
+- **Gestion de versions** : Git
+- **Développement mobile** : Android
+- **Modélisation & Conception** : UML, Merise
+- **Gestion de projet** : Méthode agile (Scrum), Trello
+- **Cybersécurité & RGPD** : Gestion des privilèges utilisateurs sur BDD, Sauvegarde et restauration de données, Requêtes préparées paramétrées, Hashage des données, Conformité RGPD
 - **Frameworks** : Bootstrap  
 - **Bases de données** : MySQL, MariaDB 
-- **Méthodes** : UML, Merise, MVC  
-- **Outils** : Git/GitHub, Visual Studio Code, Sublime Text, PhpMyAdmin  
-- **Gestion de projet** : Agile (Scrum), Trello  
+- **Outils** : Visual Studio Code, Sublime Text, PhpMyAdmin  
 
 ---
 
