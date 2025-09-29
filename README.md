@@ -25,5 +25,5 @@ Ce dépôt regroupe mes projets, compétences et réalisations en lien avec l’
 
 ## 📬 Contact
 - 📧 Email : luna.mehdi45400@gmail.com  
-- 💼 LinkedIn : [Mon profil LinkedIn](https://www.linkedin.com/in/luna-mehdi)  
-- 🖥️ GitHub : [Mon profil GitHub](https://github.com/luluslam)
+- 💼 LinkedIn : [Luna MEHDI](https://www.linkedin.com/in/luna-mehdi)  
+- 🖥️ GitHub : [Luna MEHDI](https://github.com/luluslam)
