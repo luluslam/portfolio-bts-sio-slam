@@ -7,6 +7,7 @@ Ce dépôt regroupe mes projets, compétences et réalisations en lien avec l’
 ---
 
 ## 👩‍💻 Présentation
+
 - Étudiante en BTS SIO - option SLAM  
 
 📄 [Mon CV](https://www.canva.com/design/DAGVtNDeO54/qS8fqGs13rvw_b_kVCwMrg/view?utm_content=DAGVtNDeO54&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h608f09ffd5)
@@ -14,6 +15,7 @@ Ce dépôt regroupe mes projets, compétences et réalisations en lien avec l’
 ---
 
 ## 🛠️ Compétences techniques
+
 - **Langages et programmation** : Java (POO, JUnit, SonarQube), PHP, HTML, CSS, JavaScript, Python, SQL (MySQL, MariaDB, SQL Server, SQLite), XML, PowerShell
 - **Outils & Environnements de développement** : Eclipse, Android Studio, Visual Studio Code, Sublime Text
 - **Gestion de versions** : Git
@@ -27,7 +29,14 @@ Ce dépôt regroupe mes projets, compétences et réalisations en lien avec l’
 
 ---
 
+## Stages
+
+**Stage de première année : **
+J'ai réalisé mon stage de première année au sein de la préfecture du Loiret, dans le service informatique. Ils m'ont confié différentes missions, telles que
+
+
 ## 📬 Contact
+
 - 📧 Email : luna.mehdi45400@gmail.com  
 - 💼 LinkedIn : [Luna MEHDI](https://www.linkedin.com/in/luna-mehdi)  
 - 🖥️ GitHub : [Luna MEHDI](https://github.com/luluslam)
