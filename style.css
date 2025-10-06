@@ -203,36 +203,3 @@ h3{
 /* ========== Helpers ========== */
 a{ color: var(--accent); }
 strong{ color: #ffffff; }
-
-/* ========== Thème clair ========== */
-body.light {
-  --bg: #f2f4f8;
-  --surface: #ffffff;
-  --surface-alt: #eef0f4;
-  --text: #1c1c1c;
-  --muted: #3c3c3c;
-  --accent: #0077ff;
-  --primary: #0066dd;
-  --card: #ffffff;
-  --border: #d0d4dc;
-  --tag: #e8ebf2;
-  --shadow: 0 4px 18px rgba(0,0,0,.08);
-  transition: background 0.3s, color 0.3s;
-}
-
-/* Animation douce au changement de thème */
-body {
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-.theme-toggle {
-  cursor: pointer;
-  background: var(--tag);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-.theme-toggle:hover {
-  background: var(--accent);
-  color: white;
-}
