@@ -1,10 +1,13 @@
 :root {
   --rose: #FCB1ED;
   --rose-fonce: #FFABED;
-  --fond: #fff5fa;
+  --fond: #fff3f8;
   --carte: #ffffff;
   --texte: #1a1a1a;
-  --bordure: rgba(255, 171, 237, 0.2);
+  --clair: #fdfdfd;
+  --sombre: #1a1a1a;
+  --sombre2: #2a2a2a;
+  --bordure: rgba(252, 177, 237, 0.2);
 }
 
 /* --- Structure générale --- */
@@ -12,48 +15,51 @@ body {
   margin: 0;
   display: flex;
   font-family: "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(180deg, #fffafc 0%, #fce9f7 100%);
+  background: linear-gradient(180deg, #fff6fb 0%, #fce9f7 100%);
   color: var(--texte);
 }
 
-/* --- Sidebar --- */
+/* --- Barre latérale --- */
 .sidebar {
-  width: 250px;
-  background: #fff;
-  border-right: 1px solid var(--bordure);
+  width: 270px;
   height: 100vh;
+  background: #1e1e1e;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 20px;
   position: fixed;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  border: 2px solid var(--rose);
 }
 
-h1 {
+.sidebar h1 {
   font-size: 1.2rem;
   margin: 0;
+  text-align: center;
 }
 
 .subtitle {
   font-size: 0.85rem;
-  color: #555;
+  color: #ccc;
   text-align: center;
-  margin-bottom: 24px;
+  margin: 10px 0 30px;
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 100%;
+  gap: 10px;
 }
 
 .nav a {
@@ -61,60 +67,65 @@ h1 {
   padding: 10px 16px;
   border-radius: 10px;
   text-decoration: none;
-  color: var(--texte);
-  text-align: left;
-  transition: all 0.25s ease;
+  color: #ddd;
   font-weight: 500;
+  transition: all 0.25s ease;
 }
 
 .nav a:hover {
-  background: var(--rose);
-  color: #fff;
+  background: rgba(252, 177, 237, 0.1);
+  color: var(--rose);
 }
 
 .nav a.active {
-  background: var(--rose-fonce);
+  background: rgba(252, 177, 237, 0.25);
+  border-left: 3px solid var(--rose);
   color: #fff;
 }
 
 /* --- Contenu principal --- */
 .main {
-  margin-left: 270px;
+  margin-left: 290px;
   padding: 40px 60px;
   width: 100%;
 }
 
-/* --- Cartes principales --- */
+/* --- Cartes --- */
 .card {
   background: var(--carte);
   border: 1px solid var(--bordure);
-  border-radius: 14px;
-  padding: 20px 28px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .card h2 {
   margin-top: 0;
   color: var(--rose-fonce);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
   border-bottom: 2px solid var(--rose);
   display: inline-block;
   padding-bottom: 4px;
+  margin-bottom: 16px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
 
 .subcard {
-  background: #fff9fc;
-  border-radius: 10px;
+  background: var(--fond);
+  border-radius: 12px;
   padding: 16px;
   border: 1px solid var(--bordure);
 }
 
+/* --- Liens / listes --- */
 ul {
   margin: 0;
   padding-left: 20px;
@@ -138,16 +149,14 @@ footer {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #fff;
-  color: var(--texte);
+  background: var(--rose);
+  color: #fff;
   border-radius: 8px;
-  border: 1px solid var(--rose-fonce);
   text-decoration: none;
   transition: all 0.25s ease;
   font-weight: 500;
 }
 
 .btn:hover {
-  background: var(--rose);
-  color: #fff;
+  background: var(--rose-fonce);
 }
