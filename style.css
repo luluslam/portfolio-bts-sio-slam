@@ -1,16 +1,19 @@
-/* === Thème clair rose pastel — Portfolio BTS SIO SLAM === */
+/* === Thème clair rose #FFABED & #FCB1ED — Portfolio BTS SIO SLAM === */
 :root {
-  --bg: #fffafc;
+  --bg: #fffdfd;
   --surface: #ffffff;
-  --surface-alt: #fff5f8;
-  --text: #222222;
+  --surface-alt: #fff8fc;
+  --text: #1f1f1f;
   --muted: #555555;
-  --accent: #e84a8a; /* rose principal */
-  --primary: #ff6fa5; /* rose clair pour boutons */
+
+  /* 🎨 Palette rose pastel */
+  --accent: #FFABED;   /* rose vif (titres / boutons principaux) */
+  --primary: #FCB1ED;  /* rose clair (hover / survols / fonds doux) */
+
   --card: #ffffff;
-  --border: #f1c4d8;
-  --tag: #ffe6ef;
-  --shadow: 0 6px 20px rgba(233, 88, 144, 0.15);
+  --border: #f5cce9;
+  --tag: #ffe9f8;
+  --shadow: 0 6px 20px rgba(255, 171, 237, 0.2);
   --radius: 14px;
 }
 
@@ -36,7 +39,7 @@ html, body {
 /* === Header === */
 .site-header {
   padding: 64px 0 48px;
-  background: linear-gradient(180deg, #ffe6ef, #ffffff);
+  background: linear-gradient(180deg, var(--primary), #ffffff);
   border-bottom: 1px solid var(--border);
   text-align: center;
   box-shadow: var(--shadow);
@@ -81,7 +84,7 @@ h1 {
 
 .btn:hover {
   background: var(--primary);
-  color: #fff;
+  color: #000;
   transform: translateY(-2px);
 }
 
@@ -141,11 +144,12 @@ h2 {
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 171, 237, 0.3);
 }
 
 /* --- Tags --- */
@@ -192,7 +196,7 @@ h2 {
 
 .contact-card:hover {
   background: var(--primary);
-  color: #fff;
+  color: #000;
   transform: translateY(-2px);
 }
 
