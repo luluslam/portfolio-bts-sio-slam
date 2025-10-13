@@ -1,16 +1,17 @@
-/* === Thème clair professionnel === */
+/* === Thème clair rose pastel — Portfolio BTS SIO SLAM === */
 :root {
-  --bg: #f5f7fb;
+  --bg: #fffafc;
   --surface: #ffffff;
-  --surface-alt: #f0f3f9;
-  --text: #1c1f25;
-  --muted: #4b5565;
-  --accent: #0077cc;
-  --primary: #2a8cff;
+  --surface-alt: #fff5f8;
+  --text: #222222;
+  --muted: #555555;
+  --accent: #e84a8a; /* rose principal */
+  --primary: #ff6fa5; /* rose clair pour boutons */
   --card: #ffffff;
-  --border: #dbe1ec;
-  --tag: #e7edf7;
-  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --border: #f1c4d8;
+  --tag: #ffe6ef;
+  --shadow: 0 6px 20px rgba(233, 88, 144, 0.15);
+  --radius: 14px;
 }
 
 * {
@@ -22,10 +23,11 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", Roboto, sans-serif;
+  font-family: "Segoe UI", Roboto, "Noto Sans", sans-serif;
   line-height: 1.6;
 }
 
+/* --- Conteneur général --- */
 .container {
   width: min(1100px, 92vw);
   margin: 0 auto;
@@ -34,9 +36,10 @@ html, body {
 /* === Header === */
 .site-header {
   padding: 64px 0 48px;
-  background: linear-gradient(180deg, #e9f2ff, #ffffff);
+  background: linear-gradient(180deg, #ffe6ef, #ffffff);
   border-bottom: 1px solid var(--border);
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
 h1 {
@@ -51,7 +54,7 @@ h1 {
 
 .lead {
   color: var(--muted);
-  margin: 0 auto 20px;
+  margin: 0 auto 24px;
   max-width: 70ch;
 }
 
@@ -62,32 +65,35 @@ h1 {
   flex-wrap: wrap;
 }
 
+/* --- Boutons --- */
 .btn {
   display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
+  padding: 12px 22px;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
   text-decoration: none;
   color: var(--text);
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  background: var(--surface);
   font-weight: 500;
+  box-shadow: var(--shadow);
 }
 
 .btn:hover {
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
+  transform: translateY(-2px);
 }
 
 .btn.primary {
-  background: var(--primary);
-  color: white;
+  background: var(--accent);
+  color: #fff;
   border: none;
-  box-shadow: var(--shadow);
 }
 
 /* === Sections === */
 .section {
-  padding: 56px 0;
+  padding: 64px 0;
   border-top: 1px solid var(--border);
 }
 
@@ -99,38 +105,10 @@ h2 {
   font-size: clamp(1.3rem, 1vw + 1rem, 1.7rem);
   margin-bottom: 18px;
   color: var(--accent);
+  text-align: center;
 }
 
-/* === Cards === */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tags span {
-  background: var(--tag);
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
-
-/* === Lists === */
+/* === Listes === */
 .checklist {
   list-style: none;
   padding: 0;
@@ -150,6 +128,42 @@ h2 {
   color: var(--accent);
 }
 
+/* === Cartes === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* --- Tags --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: var(--tag);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* --- Puces --- */
 .bullet {
   margin: 8px 0 0;
   padding-left: 18px;
@@ -169,20 +183,21 @@ h2 {
   padding: 16px;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   text-decoration: none;
   color: var(--text);
   box-shadow: var(--shadow);
-  transition: transform 0.1s ease, background 0.2s ease;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .contact-card:hover {
-  background: #eaf3ff;
+  background: var(--primary);
+  color: #fff;
   transform: translateY(-2px);
 }
 
 .contact-card .emoji {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 /* === Footer === */
@@ -192,8 +207,19 @@ h2 {
   background: var(--surface);
   color: var(--muted);
   text-align: center;
+  font-size: 0.9rem;
 }
 
-.small {
-  font-size: 0.9rem;
+/* === Liens === */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--text);
 }
