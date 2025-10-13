@@ -227,3 +227,49 @@ a:hover {
 strong {
   color: var(--text);
 }
+
+/* === Barre latérale fixe === */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  color: #fff;
+  padding: 30px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/* === Contenu principal === */
+.content {
+  margin-left: 240px;
+  padding: 40px 60px;
+}
