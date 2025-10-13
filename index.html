@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio BTS SIO SLAM — Luna MEHDI</title>
-  <meta name="description" content="Portfolio BTS SIO SLAM de Luna MEHDI — projets, compétences, stages, certifications et contact." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Menu latéral minimal -->
+  <!-- Barre latérale -->
   <aside class="sidebar">
-    <div class="sidebar-inner">
-      <h1 class="logo">Luna<br><span>MEHDI</span></h1>
-      <nav class="nav">
-        <a href="#presentation" class="active">Présentation</a>
-        <a href="#projets">Projets</a>
-        <a href="#competences">Compétences</a>
-        <a href="#stage">Stage</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#veille">Veille</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="profile">
+      <img src="portrait.jpg" alt="Portrait de Luna MEHDI" class="profile-img">
+      <h1>Luna MEHDI</h1>
+      <p class="subtitle">BTS SIO – option SLAM<br>Développeuse junior</p>
     </div>
+
+    <nav class="nav">
+      <a href="#presentation" class="active">Aperçu</a>
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="#stage">Stage</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#veille">Veille</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </aside>
 
   <!-- Contenu principal -->
-  <main class="content">
-    <section id="presentation" class="section">
+  <main class="main">
+    <section id="presentation" class="card">
       <h2>Présentation</h2>
       <p>
         Étudiante en <strong>BTS SIO option SLAM</strong> (Solutions Logicielles et Applications Métiers),
-        je présente dans ce portfolio mes projets, compétences et réalisations
-        dans le cadre de l’épreuve <strong>E4 — Support et mise à disposition de services informatiques</strong>.
+        je présente ici mes projets, compétences et réalisations dans le cadre de l’épreuve
+        <strong>E4 – Support et mise à disposition de services informatiques</strong>.
       </p>
     </section>
 
-    <section id="projets" class="section">
+    <section id="projets" class="card">
       <h2>Projets</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Automatisation Active Directory</h3>
-          <p>Développement d’un outil PowerShell + PHP pour la gestion des utilisateurs et l’automatisation de rapports CSV.</p>
-        </article>
+      <ul>
+        <li><strong>Automatisation Active Directory :</strong> Scripts PowerShell & PHP pour la gestion d’utilisateurs et rapports CSV.</li>
+        <li><strong>Application MVC – GSBParam :</strong> Site MVC de gestion des rapports de visite et praticiens (MySQL, PHP, MVC).</li>
+        <li><strong>Portfolio GitHub :</strong> Présentation de projets BTS sur GitHub Pages.</li>
+      </ul>
+    </section>
 
-        <article class="card">
-          <h3>Application MVC – GSBParam</h3>
-          <p>Création d’un site MVC de gestion des rapports de visite et praticiens, avec base de données MySQL.</p>
-        </article>
+    <section id="competences" class="card">
+      <h2>Compétences</h2>
+      <div class="grid">
+        <div class="subcard">
+          <h3>Langages & Programmation</h3>
+          <ul>
+            <li>Java, PHP, HTML/CSS, JavaScript</li>
+            <li>SQL, PowerShell</li>
+          </ul>
+        </div>
 
-        <article class="card">
-          <h3>Portfolio personnel</h3>
-          <p>Développement et hébergement d’un site de présentation des projets BTS sur GitHub Pages.</p>
-        </article>
+        <div class="subcard">
+          <h3>Outils</h3>
+          <ul>
+            <li>VS Code, Eclipse, PhpMyAdmin</li>
+            <li>GitHub, Trello</li>
+          </ul>
+        </div>
+
+        <div class="subcard">
+          <h3>Cybersécurité</h3>
+          <ul>
+            <li>Requêtes préparées</li>
+            <li>Hashage et gestion des privilèges</li>
+            <li>Conformité RGPD</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="competences" class="section">
-      <h2>Compétences</h2>
-      <ul>
-        <li><strong>Langages :</strong> Java, PHP, HTML, CSS, SQL, PowerShell</li>
-        <li><strong>Outils :</strong> VS Code, Eclipse, PhpMyAdmin, GitHub</li>
-        <li><strong>Cybersécurité :</strong> Requêtes préparées, hashage, gestion des droits, RGPD</li>
-      </ul>
-    </section>
-
-    <section id="stage" class="section">
+    <section id="stage" class="card">
       <h2>Stage</h2>
-      <p><strong>Préfecture du Loiret — Service Informatique</strong></p>
+      <p><strong>Préfecture du Loiret – Service Informatique</strong></p>
       <ul>
         <li>Écriture et automatisation de scripts PowerShell</li>
         <li>Création d’interfaces web reliées aux scripts</li>
-        <li>Gestion des comptes et utilisateurs Active Directory</li>
+        <li>Maintenance et gestion des comptes Active Directory</li>
       </ul>
     </section>
 
-    <section id="certifications" class="section">
+    <section id="certifications" class="card">
       <h2>Certifications & formations</h2>
       <ul>
         <li>OpenClassrooms — Administration Linux</li>
@@ -84,44 +96,31 @@
       </ul>
     </section>
 
-    <section id="veille" class="section">
+    <section id="veille" class="card">
       <h2>Veille technologique</h2>
       <ul>
-        <li>Évolution des attaques par phishing — ANSSI 2025</li>
+        <li>Évolution des attaques par phishing (ANSSI 2025)</li>
         <li>Automatisation PowerShell & IA dans l’administration système</li>
       </ul>
     </section>
 
-    <!-- Contact -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Retrouvez mes profils et documents :</p>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <div class="contact-buttons">
+        <a href="mailto:luna.mehdi45400@gmail.com" class="btn">Email</a>
+        <a href="https://github.com/luluslam" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/luna-mehdi" target="_blank" class="btn">LinkedIn</a>
+        <a href="https://www.canva.com/design/DAG0ccmCzdI/boNcnE4DrQ3-Mif4rQe2FQ/edit" target="_blank" class="btn">CV</a>
+      </div>
+    </section>
 
-  <div class="contact-buttons">
-    <a href="https://www.canva.com/design/DAG0ccmCzdI/boNcnE4DrQ3-Mif4rQe2FQ/edit" target="_blank" class="btn-contact">
-      📄 Voir mon CV
-    </a>
-    <a href="https://github.com/luluslam" target="_blank" class="btn-contact">
-      💻 GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/luna-mehdi" target="_blank" class="btn-contact">
-      💼 LinkedIn
-    </a>
-    <a href="mailto:luna.mehdi45400@gmail.com" class="btn-contact">
-      ✉️ Email
-    </a>
-  </div>
-</section>
-
-    <footer class="site-footer">
+    <footer>
       © <span id="year"></span> Luna MEHDI — Portfolio BTS SIO SLAM
     </footer>
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // gestion de la rubrique active
     const links = document.querySelectorAll('.nav a');
     links.forEach(link => {
       link.addEventListener('click', () => {
