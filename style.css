@@ -1,103 +1,105 @@
 :root {
   --rose: #FCB1ED;
   --rose-fonce: #FFABED;
-  --fond: #fff3f8;
-  --carte: #ffffff;
-  --texte: #1a1a1a;
-  --clair: #fdfdfd;
-  --sombre: #1a1a1a;
-  --sombre2: #2a2a2a;
-  --bordure: rgba(252, 177, 237, 0.2);
+  --fond-sombre: #18141a;
+  --fond-clair: #fffafc;
+  --texte: #ffffff;
+  --texte-clair: #222;
 }
 
-/* --- Structure générale --- */
+/* Général */
 body {
   margin: 0;
   display: flex;
   font-family: "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(180deg, #fff6fb 0%, #fce9f7 100%);
-  color: var(--texte);
+  background: radial-gradient(circle at top left, #ffeef9 0%, #fce9f7 60%, #fffafc 100%);
 }
 
 /* --- Barre latérale --- */
 .sidebar {
-  width: 270px;
+  width: 260px;
   height: 100vh;
-  background: #1e1e1e;
-  color: #fff;
+  background: #1e1a20;
+  color: var(--texte);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  padding: 28px 20px;
   position: fixed;
-  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
+  border-right: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .profile-img {
-  width: 85px;
-  height: 85px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border: 2px solid var(--rose);
 }
 
-.sidebar h1 {
+h1 {
   font-size: 1.2rem;
-  margin: 0;
-  text-align: center;
+  margin: 5px 0;
 }
 
 .subtitle {
   font-size: 0.85rem;
   color: #ccc;
-  text-align: center;
-  margin: 10px 0 30px;
+  line-height: 1.4;
 }
 
+/* Navigation */
 .nav {
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 10px;
+  width: 100%;
 }
 
 .nav a {
-  display: block;
-  padding: 10px 16px;
-  border-radius: 10px;
-  text-decoration: none;
   color: #ddd;
+  text-decoration: none;
   font-weight: 500;
-  transition: all 0.25s ease;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: 0.25s ease;
+  text-align: left;
 }
 
 .nav a:hover {
-  background: rgba(252, 177, 237, 0.1);
+  background: rgba(252, 177, 237, 0.15);
   color: var(--rose);
 }
 
 .nav a.active {
-  background: rgba(252, 177, 237, 0.25);
+  background: rgba(252, 177, 237, 0.3);
   border-left: 3px solid var(--rose);
   color: #fff;
 }
 
 /* --- Contenu principal --- */
 .main {
-  margin-left: 290px;
+  margin-left: 280px;
   padding: 40px 60px;
-  width: 100%;
+  color: var(--texte-clair);
 }
 
 /* --- Cartes --- */
 .card {
-  background: var(--carte);
-  border: 1px solid var(--bordure);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 171, 237, 0.25);
   border-radius: 16px;
   padding: 24px 32px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(252, 177, 237, 0.15);
 }
 
 .card h2 {
@@ -105,7 +107,6 @@ body {
   color: var(--rose-fonce);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 1.2rem;
   border-bottom: 2px solid var(--rose);
   display: inline-block;
   padding-bottom: 4px;
@@ -119,26 +120,13 @@ body {
 }
 
 .subcard {
-  background: var(--fond);
+  background: #fff9fc;
   border-radius: 12px;
   padding: 16px;
-  border: 1px solid var(--bordure);
+  border: 1px solid rgba(252, 177, 237, 0.25);
 }
 
-/* --- Liens / listes --- */
-ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-footer {
-  text-align: center;
-  color: #777;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-
-/* --- Boutons de contact --- */
+/* --- Boutons contact --- */
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -159,4 +147,12 @@ footer {
 
 .btn:hover {
   background: var(--rose-fonce);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
