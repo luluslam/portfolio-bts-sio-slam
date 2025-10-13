@@ -1,38 +1,32 @@
 :root {
   --rose: #FCB1ED;
   --rose-fonce: #FFABED;
-  --fond-sombre: #18141a;
-  --fond-clair: #fffafc;
-  --texte: #ffffff;
-  --texte-clair: #222;
+  --fond: #fff5fa;
+  --carte: #ffffff;
+  --texte: #1a1a1a;
+  --bordure: rgba(255, 171, 237, 0.2);
 }
 
-/* Général */
+/* --- Structure générale --- */
 body {
   margin: 0;
   display: flex;
   font-family: "Segoe UI", Roboto, sans-serif;
-  background: radial-gradient(circle at top left, #ffeef9 0%, #fce9f7 60%, #fffafc 100%);
+  background: linear-gradient(180deg, #fffafc 0%, #fce9f7 100%);
+  color: var(--texte);
 }
 
-/* --- Barre latérale --- */
+/* --- Sidebar --- */
 .sidebar {
-  width: 260px;
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid var(--bordure);
   height: 100vh;
-  background: #1e1a20;
-  color: var(--texte);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 20px;
+  padding: 30px 20px;
   position: fixed;
-  border-right: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 4px 0 10px rgba(0,0,0,0.3);
-}
-
-.profile {
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .profile-img {
@@ -40,22 +34,21 @@ body {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
-  border: 2px solid var(--rose);
+  margin-bottom: 12px;
 }
 
 h1 {
   font-size: 1.2rem;
-  margin: 5px 0;
+  margin: 0;
 }
 
 .subtitle {
   font-size: 0.85rem;
-  color: #ccc;
-  line-height: 1.4;
+  color: #555;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
-/* Navigation */
 .nav {
   display: flex;
   flex-direction: column;
@@ -64,69 +57,77 @@ h1 {
 }
 
 .nav a {
-  color: #ddd;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 14px;
+  display: block;
+  padding: 10px 16px;
   border-radius: 10px;
-  transition: 0.25s ease;
+  text-decoration: none;
+  color: var(--texte);
   text-align: left;
+  transition: all 0.25s ease;
+  font-weight: 500;
 }
 
 .nav a:hover {
-  background: rgba(252, 177, 237, 0.15);
-  color: var(--rose);
+  background: var(--rose);
+  color: #fff;
 }
 
 .nav a.active {
-  background: rgba(252, 177, 237, 0.3);
-  border-left: 3px solid var(--rose);
+  background: var(--rose-fonce);
   color: #fff;
 }
 
 /* --- Contenu principal --- */
 .main {
-  margin-left: 280px;
+  margin-left: 270px;
   padding: 40px 60px;
-  color: var(--texte-clair);
+  width: 100%;
 }
 
-/* --- Cartes --- */
+/* --- Cartes principales --- */
 .card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 171, 237, 0.25);
-  border-radius: 16px;
-  padding: 24px 32px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(252, 177, 237, 0.15);
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 14px;
+  padding: 20px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
 .card h2 {
   margin-top: 0;
   color: var(--rose-fonce);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   border-bottom: 2px solid var(--rose);
   display: inline-block;
   padding-bottom: 4px;
-  margin-bottom: 16px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
 }
 
 .subcard {
   background: #fff9fc;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 16px;
-  border: 1px solid rgba(252, 177, 237, 0.25);
+  border: 1px solid var(--bordure);
 }
 
-/* --- Boutons contact --- */
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* --- Boutons de contact --- */
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -137,22 +138,16 @@ h1 {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--rose);
-  color: #fff;
+  background: #fff;
+  color: var(--texte);
   border-radius: 8px;
+  border: 1px solid var(--rose-fonce);
   text-decoration: none;
   transition: all 0.25s ease;
   font-weight: 500;
 }
 
 .btn:hover {
-  background: var(--rose-fonce);
-}
-
-/* --- Footer --- */
-footer {
-  text-align: center;
-  color: #777;
-  margin-top: 40px;
-  font-size: 0.9rem;
+  background: var(--rose);
+  color: #fff;
 }
