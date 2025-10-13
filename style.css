@@ -155,3 +155,42 @@ a:hover {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+/* === Boutons de contact professionnels === */
+.contact-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 24px;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f8f8f8;
+  color: var(--text);
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.btn-contact:hover {
+  background: var(--accent-light);
+  color: #000;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(255, 171, 237, 0.25);
+}
+
+.btn-contact:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
