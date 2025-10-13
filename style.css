@@ -122,3 +122,36 @@ a:hover {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+/* === Boutons de contact (roses) === */
+.contact-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  border: none;
+  box-shadow: 0 2px 6px rgba(255, 171, 237, 0.3);
+}
+
+.btn-contact:hover {
+  background: var(--accent-light);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(252, 177, 237, 0.4);
+}
