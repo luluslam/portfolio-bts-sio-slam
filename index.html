@@ -8,127 +8,98 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Menu latéral -->
+  <!-- Menu latéral minimal -->
   <aside class="sidebar">
-    <h1 class="logo">Luna MEHDI</h1>
-    <nav class="nav">
-      <a href="#presentation" class="active">Présentation</a>
-      <a href="#projets">Projets</a>
-      <a href="#competences">Compétences</a>
-      <a href="#stage">Stage</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#veille">Veille</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="sidebar-inner">
+      <h1 class="logo">Luna<br><span>MEHDI</span></h1>
+      <nav class="nav">
+        <a href="#presentation" class="active">Présentation</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#stage">Stage</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#veille">Veille</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </aside>
 
   <!-- Contenu principal -->
   <main class="content">
-
-    <!-- Présentation -->
     <section id="presentation" class="section">
       <h2>Présentation</h2>
       <p>
         Étudiante en <strong>BTS SIO option SLAM</strong> (Solutions Logicielles et Applications Métiers),
-        je présente ici mes projets, compétences et réalisations dans le cadre de l’épreuve
-        <strong>E4 — Support et mise à disposition de services informatiques</strong>.
+        je présente dans ce portfolio mes projets, compétences et réalisations
+        dans le cadre de l’épreuve <strong>E4 — Support et mise à disposition de services informatiques</strong>.
       </p>
-      <ul class="checklist">
-        <li>Développement d’applications web et scripts PowerShell</li>
-        <li>Conception orientée objet (Java, PHP, MVC)</li>
-        <li>Veille et conformité RGPD</li>
-      </ul>
     </section>
 
-    <!-- Projets -->
     <section id="projets" class="section">
-      <h2>Projets réalisés</h2>
-
+      <h2>Projets</h2>
       <div class="cards">
         <article class="card">
           <h3>Automatisation Active Directory</h3>
-          <p>Outil PowerShell et PHP pour rechercher des utilisateurs dans un domaine AD, générer des rapports CSV et afficher les résultats sur une page web.</p>
+          <p>Développement d’un outil PowerShell + PHP pour la gestion des utilisateurs et l’automatisation de rapports CSV.</p>
         </article>
 
         <article class="card">
-          <h3>Application MVC — GSBParam</h3>
-          <p>Développement d’un site MVC pour la gestion des rapports de visite et des praticiens.</p>
+          <h3>Application MVC – GSBParam</h3>
+          <p>Création d’un site MVC de gestion des rapports de visite et praticiens, avec base de données MySQL.</p>
         </article>
 
         <article class="card">
-          <h3>Portfolio GitHub</h3>
-          <p>Création d’un portfolio hébergé sur GitHub Pages, présentant mes projets BTS SIO.</p>
+          <h3>Portfolio personnel</h3>
+          <p>Développement et hébergement d’un site de présentation des projets BTS sur GitHub Pages.</p>
         </article>
       </div>
     </section>
 
-    <!-- Compétences -->
     <section id="competences" class="section">
-      <h2>Compétences techniques</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Langages & Programmation</h3>
-          <p>Java, PHP, HTML/CSS, JavaScript, SQL, PowerShell</p>
-        </article>
-        <article class="card">
-          <h3>Outils</h3>
-          <p>VS Code, Eclipse, PhpMyAdmin, GitHub, Trello</p>
-        </article>
-        <article class="card">
-          <h3>Cybersécurité</h3>
-          <p>Requêtes préparées, hashage, gestion des privilèges, conformité RGPD</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Stage -->
-    <section id="stage" class="section">
-      <h2>Stage</h2>
-      <p><strong>Préfecture du Loiret – Service Informatique</strong></p>
+      <h2>Compétences</h2>
       <ul>
-        <li>Écriture et automatisation de scripts PowerShell</li>
-        <li>Création de pages web reliées aux scripts</li>
-        <li>Maintenance et gestion des utilisateurs Active Directory</li>
+        <li><strong>Langages :</strong> Java, PHP, HTML, CSS, SQL, PowerShell</li>
+        <li><strong>Outils :</strong> VS Code, Eclipse, PhpMyAdmin, GitHub</li>
+        <li><strong>Cybersécurité :</strong> Requêtes préparées, hashage, gestion des droits, RGPD</li>
       </ul>
     </section>
 
-    <!-- Certifications -->
+    <section id="stage" class="section">
+      <h2>Stage</h2>
+      <p><strong>Préfecture du Loiret — Service Informatique</strong></p>
+      <ul>
+        <li>Écriture et automatisation de scripts PowerShell</li>
+        <li>Création d’interfaces web reliées aux scripts</li>
+        <li>Gestion des comptes et utilisateurs Active Directory</li>
+      </ul>
+    </section>
+
     <section id="certifications" class="section">
       <h2>Certifications & formations</h2>
       <ul>
-        <li>OpenClassrooms — Administration d’un système Linux</li>
-        <li>Créer un site web avec HTML5 et CSS3</li>
+        <li>OpenClassrooms — Administration Linux</li>
+        <li>Créer un site web avec HTML5 & CSS3</li>
         <li>Conception d’un réseau TCP/IP</li>
         <li>PIX — Certification numérique</li>
       </ul>
     </section>
 
-    <!-- Veille -->
     <section id="veille" class="section">
       <h2>Veille technologique</h2>
-      <p>Exemples :</p>
       <ul>
-        <li>Cybersécurité : évolution des attaques par phishing (source : ANSSI, 2025)</li>
-        <li>Automatisation PowerShell et IA dans l’administration système</li>
+        <li>Évolution des attaques par phishing — ANSSI 2025</li>
+        <li>Automatisation PowerShell & IA dans l’administration système</li>
       </ul>
     </section>
 
-    <!-- Contact -->
-    <!-- Contact -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <div class="contact-buttons">
-    <a href="https://www.canva.com/design/DAG0ccmCzdI/boNcnE4DrQ3-Mif4rQe2FQ/edit" target="_blank" class="btn-contact">
-      📄 Voir mon CV
-    </a>
-    <a href="https://github.com/luluslam" target="_blank" class="btn-contact">
-      🖥️ GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/luna-mehdi" target="_blank" class="btn-contact">
-      💼 LinkedIn
-    </a>
-  </div>
-</section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-buttons">
+        <a href="https://www.canva.com/design/DAG0ccmCzdI/boNcnE4DrQ3-Mif4rQe2FQ/edit" target="_blank" class="btn-contact">Voir mon CV</a>
+        <a href="https://github.com/luluslam" target="_blank" class="btn-contact">GitHub</a>
+        <a href="https://www.linkedin.com/in/luna-mehdi" target="_blank" class="btn-contact">LinkedIn</a>
+      </div>
+    </section>
 
     <footer class="site-footer">
       © <span id="year"></span> Luna MEHDI — Portfolio BTS SIO SLAM
@@ -138,7 +109,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Gère la couleur active du menu
+    // gestion de la rubrique active
     const links = document.querySelectorAll('.nav a');
     links.forEach(link => {
       link.addEventListener('click', () => {
