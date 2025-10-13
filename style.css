@@ -1,124 +1,148 @@
-/* ========== Thème & variables ==========
-   Palette douce et lisible, responsive par défaut
-*/
-:root{
-  --bg: #0f1420;
-  --surface: #121826;
-  --surface-alt: #0c111b;
-  --text: #e7ecf4;
-  --muted: #b7c0d5;
-  --accent: #7cc7ff;
-  --primary: #4aa3ff;
-  --card: #151c2c;
-  --border: #253046;
-  --tag: #1b2538;
-  --shadow: 0 10px 30px rgba(0,0,0,.25);
+/* === Thème clair professionnel === */
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-alt: #f0f3f9;
+  --text: #1c1f25;
+  --muted: #4b5565;
+  --accent: #0077cc;
+  --primary: #2a8cff;
+  --card: #ffffff;
+  --border: #dbe1ec;
+  --tag: #e7edf7;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body{
+html, body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, var(--bg), var(--surface));
+  background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  font-family: "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
 }
 
-img{ max-width: 100%; display: block; }
-
-.container{
+.container {
   width: min(1100px, 92vw);
   margin: 0 auto;
 }
 
-/* ========== Header / Hero ========== */
-.site-header{
+/* === Header === */
+.site-header {
   padding: 64px 0 48px;
-  background: radial-gradient(1000px 500px at 10% -10%, rgba(124,199,255,.18), transparent 60%),
-              radial-gradient(1000px 500px at 90% -10%, rgba(74,163,255,.12), transparent 60%);
+  background: linear-gradient(180deg, #e9f2ff, #ffffff);
   border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
-h1{
-  font-size: clamp(1.6rem, 2vw + 1.2rem, 2.4rem);
+h1 {
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem);
   margin: 0 0 12px;
-  letter-spacing: 0.2px;
+  color: var(--text);
 }
 
-.accent{ color: var(--accent); }
+.accent {
+  color: var(--accent);
+}
 
-.lead{
+.lead {
   color: var(--muted);
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   max-width: 70ch;
 }
 
-.cta-group{
+.cta-group {
   display: flex;
+  justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.btn{
+.btn {
   display: inline-block;
-  padding: 12px 18px;
-  border-radius: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
   border: 1px solid var(--border);
   text-decoration: none;
   color: var(--text);
-  transition: transform .06s ease, background .2s ease, border-color .2s ease;
-  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+  font-weight: 500;
 }
 
-.btn:hover{ transform: translateY(-1px); }
+.btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
 
-.btn.primary{
-  background: linear-gradient(180deg, var(--primary), #2c7ae6);
-  border-color: transparent;
+.btn.primary {
+  background: var(--primary);
   color: white;
+  border: none;
   box-shadow: var(--shadow);
 }
 
-.btn.ghost{
-  background: rgba(255,255,255,0.03);
-}
-
-/* ========== Sections ========== */
-.section{
+/* === Sections === */
+.section {
   padding: 56px 0;
   border-top: 1px solid var(--border);
 }
 
-.section.alt{
+.section.alt {
   background: var(--surface-alt);
 }
 
-h2{
-  font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
-  margin: 0 0 18px;
+h2 {
+  font-size: clamp(1.3rem, 1vw + 1rem, 1.7rem);
+  margin-bottom: 18px;
+  color: var(--accent);
 }
 
-h3{
-  margin: 0 0 10px;
-  font-size: 1.05rem;
+/* === Cards === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
 }
 
-/* ========== Lists ========== */
-.checklist{
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: var(--tag);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* === Lists === */
+.checklist {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.checklist li{
+.checklist li {
   padding-left: 28px;
   position: relative;
   margin: 6px 0;
 }
 
-.checklist li::before{
+.checklist li::before {
   content: "✔";
   position: absolute;
   left: 0;
@@ -126,80 +150,50 @@ h3{
   color: var(--accent);
 }
 
-/* ========== Cards & grids ========== */
-.cards{
+.bullet {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+/* === Contact === */
+.contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 18px 16px;
-  box-shadow: var(--shadow);
-}
-
-.tags{
+.contact-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tags span{
-  background: var(--tag);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: .92rem;
-  color: var(--muted);
-}
-
-.bullet{
-  margin: 8px 0 0;
-  padding-left: 18px;
-}
-
-/* ========== Contact ========== */
-.contact-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
-}
-
-.contact-card{
-  display: grid;
-  grid-template-columns: 38px 1fr;
   align-items: center;
-  gap: 10px;
-  padding: 14px 16px;
+  gap: 12px;
+  padding: 16px;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 12px;
   text-decoration: none;
   color: var(--text);
-  transition: background .2s ease, transform .06s ease;
+  box-shadow: var(--shadow);
+  transition: transform 0.1s ease, background 0.2s ease;
 }
 
-.contact-card:hover{
-  background: #18233a;
-  transform: translateY(-1px);
+.contact-card:hover {
+  background: #eaf3ff;
+  transform: translateY(-2px);
 }
 
-.contact-card .emoji{ font-size: 1.3rem; }
+.contact-card .emoji {
+  font-size: 1.3rem;
+}
 
-/* ========== Footer ========== */
-.site-footer{
-  padding: 26px 0 40px;
+/* === Footer === */
+.site-footer {
+  padding: 24px 0 32px;
   border-top: 1px solid var(--border);
   background: var(--surface);
   color: var(--muted);
   text-align: center;
 }
 
-.small{ font-size: .92rem; }
-
-/* ========== Helpers ========== */
-a{ color: var(--accent); }
-strong{ color: #ffffff; }
+.small {
+  font-size: 0.9rem;
+}
