@@ -109,7 +109,8 @@
             <h2>Stage</h2>
             <p>
                 <strong>1ère année - Préfecture du Loiret au sein du Service Informatique</strong><br>
-                Stage de 6 semaines <strong>(du 26 mai au 4 juillet)</strong> en environnement professionnel, axé sur l’automatisation de
+                Stage de 6 semaines <strong>(du 26 mai au 4 juillet)</strong> en environnement professionnel, axé sur
+                l’automatisation de
                 recherches d'utilisateurs Active Directory et la conception d'un site web facilitant la recherche.
             </p>
             <ul>
@@ -162,8 +163,7 @@
                 <a href="mailto:luna.mehdi45400@gmail.com" class="btn">Email</a>
                 <a href="https://github.com/luluslam" target="_blank" class="btn">GitHub</a>
                 <a href="https://www.linkedin.com/in/luna-mehdi" target="_blank" class="btn">LinkedIn</a>
-                <a href="https://www.canva.com/design/DAG0ccmCzdI/boNcnE4DrQ3-Mif4rQe2FQ/edit" target="_blank"
-                    class="btn">CV</a>
+                <a href="assets/CV_Luna_MEHDI.pdf" target="_blank" class="btn">CV</a>
             </div>
         </section>
 
@@ -173,32 +173,32 @@
     </main>
 
     <script>
-  // Met à jour l'année dans le footer
-  document.getElementById("year").textContent = new Date().getFullYear();
+        // Met à jour l'année dans le footer
+        document.getElementById("year").textContent = new Date().getFullYear();
 
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav a");
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav a");
 
-  // Fonction qui met à jour le lien actif selon la position du scroll
-  window.addEventListener("scroll", () => {
-    let current = "";
+        // Fonction qui met à jour le lien actif selon la position du scroll
+        window.addEventListener("scroll", () => {
+            let current = "";
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150; // marge avant détection
-      const sectionHeight = section.clientHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
-    });
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // marge avant détection
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 
 </body>
 
