@@ -173,15 +173,33 @@
     </main>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        const links = document.querySelectorAll('.nav a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                links.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-    </script>
+  // Met à jour l'année dans le footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav a");
+
+  // Fonction qui met à jour le lien actif selon la position du scroll
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150; // marge avant détection
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
 </body>
 
 </html>
