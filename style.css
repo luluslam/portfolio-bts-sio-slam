@@ -18,15 +18,19 @@ body {
 
 /* --- Sidebar --- */
 .sidebar {
-  width: 250px;
+  width: 200px; /* ✅ un peu plus fine */
   background: #fff;
   border-right: 1px solid var(--bordure);
-  height: 100vh;
+  height: 90vh; /* ✅ légèrement plus petite que toute la hauteur */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 20px;
   position: fixed;
+  top: 5%; /* ✅ centrée verticalement un peu */
+  left: 20px; /* ✅ petit espace à gauche */
+  border-radius: 16px; /* ✅ effet carte */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* ✅ légère ombre élégante */
 }
 
 .profile-img {
