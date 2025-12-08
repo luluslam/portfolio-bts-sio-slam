@@ -120,11 +120,20 @@ h1 {
   gap: 16px;
 }
 
+/* --- Sous-cartes compétences roses --- */
 .subcard {
-  background: #fff9fc;
-  border-radius: 10px;
-  padding: 16px;
-  border: 1px solid var(--bordure);
+    background: #ffe6f7; /* même fond que les cartes RSS */
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #ffabed; /* bordure rose foncé */
+    box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25); /* ombre rose douce */
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Petit effet au survol */
+.subcard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
 }
 
 ul {
@@ -262,4 +271,48 @@ table tr:nth-child(even) {
 table tr:hover {
     background: var(--rose);
     color: #fff;
+}
+
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* ---- CARTES DE VEILLE VERSION ROSE ---- */
+
+.rss-card {
+    background: #ffe6f7; /* rose pastel */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ffabed; /* bordure rose foncé */
+    color: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25); /* ombre rose douce */
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.rss-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
+}
+
+/* TITRE DES ARTICLES */
+.rss-card a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000000; /* rose saturé pour un bon contraste */
+    text-decoration: none;
+}
+
+.rss-card a:hover {
+    text-decoration: underline;
+    color: #ff37c9; /* hover rose plus vif */
+}
+
+/* DATE */
+.rss-date {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    color: #6b0055; /* violet foncé */
+    margin: 6px 0 10px;
 }

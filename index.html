@@ -176,14 +176,13 @@
         </section>
 
 
-
         <section id="veille" class="card">
             <h2>Veille technologique</h2>
-            <ul>
-                <li>Authentification sans mot de passe</li>
-                <br>
-                <a href="assets/Veille technologique.pdf" target="_blank" class="btn">Veille technologique (début)</a>
-            </ul>
+
+            <div id="veille-container" class="veille-grid">
+                <p style="color:#777;">Chargement...</p>
+            </div>
+
         </section>
 
 
@@ -229,6 +228,88 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        async function chargerVeille() {
+
+            const flux = "https://hardware.developpez.com/index/rss";
+            const conteneur = document.getElementById("veille-container");
+            const debug = document.getElementById("debug");
+
+            function log(msg) {
+                // Debug désactivé complètement
+            }
+
+
+            conteneur.innerHTML = "<p>Chargement...</p>";
+
+            const proxys = [
+                url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+                url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+                url => `https://corsproxy.io/?${encodeURIComponent(url)}`
+            ];
+
+            let xml = null;
+
+            for (const proxy of proxys) {
+                const finalURL = proxy(flux);
+                try {
+                    log("Test proxy : " + finalURL);
+
+                    const r = await fetch(finalURL);
+                    const texte = await r.text();
+
+                    // Vérif basique RSS
+                    if (!texte.includes("<rss")) throw "Flux invalide";
+
+                    xml = new DOMParser().parseFromString(texte, "text/xml");
+                    log("✔️ PROXY OK !");
+
+                    break; // on arrête si un proxy fonctionne
+                } catch (e) {
+                    log("❌ Proxy échoué : " + e);
+                }
+            }
+
+            if (!xml) {
+                conteneur.innerHTML = "<p>Impossible de charger la veille.</p>";
+                log("❌ Aucun proxy n'a fonctionné");
+                return;
+            }
+
+            // Traiter les articles
+            let articles = [];
+            xml.querySelectorAll("item").forEach(item => {
+                articles.push({
+                    titre: item.querySelector("title")?.textContent || "Sans titre",
+                    lien: item.querySelector("link")?.textContent || "#",
+                    date: new Date(item.querySelector("pubDate")?.textContent || new Date()),
+                    texte: (item.querySelector("description")?.textContent || "")
+                        .replace(/<[^>]+>/g, "")
+                        .substring(0, 180) + "..."
+                });
+            });
+
+            articles.sort((a, b) => b.date - a.date);
+            articles = articles.slice(0, 6);
+
+            conteneur.innerHTML = "";
+
+            articles.forEach(a => {
+                conteneur.innerHTML += `
+            <div class="rss-card">
+                <a href="${a.lien}" target="_blank">${a.titre}</a>
+                <p class="rss-date">${a.date.toLocaleDateString("fr-FR")}</p>
+                <p>${a.texte}</p>
+            </div>
+        `;
+            });
+
+            log("✔️ Articles chargés !");
+        }
+
+        chargerVeille();
     </script>
 
 </body>
