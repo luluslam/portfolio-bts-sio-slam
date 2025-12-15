@@ -1,7 +1,6 @@
 :root {
   --rose: #FCB1ED;
   --rose-fonce: #FFABED;
-  --fond: #fff5fa;
   --carte: #ffffff;
   --texte: #1a1a1a;
   --bordure: rgba(255, 171, 237, 0.2);
@@ -122,18 +121,21 @@ h1 {
 
 /* --- Sous-cartes compétences roses --- */
 .subcard {
-    background: #ffe6f7; /* même fond que les cartes RSS */
-    border-radius: 12px;
-    padding: 18px;
-    border: 1px solid #ffabed; /* bordure rose foncé */
-    box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25); /* ombre rose douce */
-    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  background: #ffe6f7;
+  /* même fond que les cartes RSS */
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #ffabed;
+  /* bordure rose foncé */
+  box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25);
+  /* ombre rose douce */
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 /* Petit effet au survol */
 .subcard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
 }
 
 ul {
@@ -237,82 +239,119 @@ footer {
 
 /* --- Tableau récapitulatif --- */
 .table-container {
-    overflow-x: auto;
-    margin-top: 20px;
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid var(--bordure);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--bordure);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 table th {
-    background: var(--rose-fonce);
-    color: #fff;
-    text-align: left;
-    padding: 12px;
-    font-size: 0.95rem;
+  background: var(--rose-fonce);
+  color: #fff;
+  text-align: left;
+  padding: 12px;
+  font-size: 0.95rem;
 }
 
 table td {
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--bordure);
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--bordure);
 }
 
 table tr:nth-child(even) {
-    background: #fff8fd;
+  background: #fff8fd;
 }
 
 table tr:hover {
-    background: var(--rose);
-    color: #fff;
+  background: var(--rose);
+  color: #fff;
 }
 
 .veille-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
 }
 
-/* ---- CARTES DE VEILLE VERSION ROSE ---- */
+/* ---- Cartes de la veille ---- */
 
 .rss-card {
-    background: #ffe6f7; /* rose pastel */
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #ffabed; /* bordure rose foncé */
-    color: #1a1a1a;
-    box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25); /* ombre rose douce */
-    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  background: #ffe6f7;
+  /* rose pastel */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ffabed;
+  /* bordure rose foncé */
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25);
+  /* ombre rose douce */
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .rss-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
 }
 
-/* TITRE DES ARTICLES */
+/* Titre des articles */
 .rss-card a {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #000000; /* rose saturé pour un bon contraste */
-    text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  /* rose saturé pour un bon contraste */
+  text-decoration: none;
 }
 
 .rss-card a:hover {
-    text-decoration: underline;
-    color: #ff37c9; /* hover rose plus vif */
+  text-decoration: underline;
+  color: #ff37c9;
+  /* hover rose plus vif */
 }
 
-/* DATE */
+/* Date du flux */
 .rss-date {
-    font-size: 0.8rem;
-    opacity: 0.7;
-    color: #6b0055; /* violet foncé */
-    margin: 6px 0 10px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: #6b0055;
+  /* violet foncé */
+  margin: 6px 0 10px;
+}
+
+/* --- Certifications : bullets conservés + bouton aligné --- */
+
+.certif-list {
+  padding-left: 20px;
+}
+
+.certif-list li {
+  margin-bottom: 10px;
+}
+
+/* Conteneur interne en flex (PAS le li) */
+.certif-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Le texte prend la largeur dispo */
+.certif-row span {
+  flex: 1;
+}
+
+/* Bouton plus petit et discret */
+.btn-certif {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  border-color: var(--rose);
 }

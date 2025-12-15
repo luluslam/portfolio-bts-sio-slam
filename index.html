@@ -42,9 +42,23 @@
                 À travers mes projets ainsi que mes stages de première et deuxième année, j’ai pu mettre en pratique mes
                 connaissances
                 en développant des scripts, des interfaces web dynamiques et des solutions logicielles adaptées
-                à des besoins (en première année).
+                à des besoins professionnels.
             </p>
+
+            <!-- Objectif du portfolio -->
+            <div class="subcard">
+                <h3>Objectif du portfolio</h3>
+                <p>
+                    Ce portfolio a pour objectif de présenter l’ensemble de mes
+                    <strong>réalisations, projets et compétences</strong> acquises au cours de ma formation
+                    en <strong>BTS SIO option SLAM</strong>.
+                    Il sert de support à l’épreuve professionnelle et permet de
+                    démontrer ma capacité à <strong>concevoir, développer, sécuriser et maintenir
+                        des applications</strong>, ainsi qu’à m’intégrer dans un environnement professionnel.
+                </p>
+            </div>
         </section>
+
 
 
         <section id="projets" class="card">
@@ -130,7 +144,7 @@
 
             <div class="contact-buttons">
                 <!-- Bouton permettant de consulter le compte rendu du stage de première année -->
-                <a href="assets/Compte%20rendu%20de%20stage%20-%20SIO1%202024-2025%20Luna%20MEHDI.pdf" target="_blank"
+                <a href="assets/stage/Compte rendu de stage - SIO1 2024-2025 Luna MEHDI.pdf" target="_blank"
                     class="btn"> Compte rendu du stage de première année </a>
             </div>
 
@@ -147,22 +161,42 @@
 
         <section id="certifications" class="card">
             <h2>Certifications & formations</h2>
-            <ul>
+
+            <ul class="certif-list">
                 <li>OpenClassrooms — <em>Développement Web</em> - HTML, CSS, JavaScript, PHP</li>
-                <br>
-                <li>OpenClassrooms — <em>Contrôle de version </em> - Git / GitHub</li>
-                <br>
-                <li>OpenClassrooms — <em>Programmation </em> - C++</li>
-                <br>
+
+                <li>OpenClassrooms — <em>Contrôle de version</em> - Git / GitHub</li>
+
+                <li>OpenClassrooms — <em>Programmation</em> - C++</li>
+
                 <li>OpenClassrooms — <em>Système & réseau</em> - Concevoir notre réseau TCP / IP</li>
-                <br>
-                <li>OpenClassrooms — <em>IA</em> - Initialisez-vous à l'intelligence artificielle</li>
-                <br>
-                <li>OpenClassrooms — <em>SQL</em> - Perfectionnez votre maîtrise de SQL</li>
-                <br>
+
+                <li>
+                    <div class="certif-row">
+                        <span>
+                            OpenClassrooms — <em>IA</em> - Initialisez-vous à l'intelligence artificielle
+                        </span>
+                        <a href="assets/certificats/OC-IA.pdf" target="_blank" class="btn btn-certif">
+                            Voir le certificat
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="certif-row">
+                        <span>
+                            OpenClassrooms — <em>SQL</em> - Perfectionnez votre maîtrise de SQL
+                        </span>
+                        <a href="assets/certificats/OC-SQL.pdf" target="_blank" class="btn btn-certif">
+                            Voir le certificat
+                        </a>
+                    </div>
+                </li>
+
                 <li>ANSSI — <em>Cybersécurité</em> - Initiation à la Cybersécurité</li>
             </ul>
         </section>
+
 
 
         <section id="tableau" class="card">
@@ -170,7 +204,7 @@
             <ul>
                 <li>Tableau de synthèse récapitulant l’ensemble des réalisations au cours des deux années</li>
                 <br>
-                <a href="assets/Tableau de synthèse.pdf" target="_blank" class="btn">Tableau de synthèse</a>
+                <a href="assets/tableau/Tableau de synthèse.pdf" target="_blank" class="btn">Tableau de synthèse</a>
             </ul>
 
         </section>
@@ -192,7 +226,7 @@
                 <a href="mailto:luna.mehdi45400@gmail.com" class="btn">Email</a>
                 <a href="https://github.com/luluslam" target="_blank" class="btn">GitHub</a>
                 <a href="https://www.linkedin.com/in/luna-mehdi" target="_blank" class="btn">LinkedIn</a>
-                <a href="assets/CV Luna MEHDI.pdf" target="_blank" class="btn">CV</a>
+                <a href="assets/cv/CV Luna MEHDI.pdf" target="_blank" class="btn">CV</a>
             </div>
         </section>
 
@@ -268,13 +302,13 @@
 
                     break; // on arrête si un proxy fonctionne
                 } catch (e) {
-                    log("❌ Proxy échoué : " + e);
+                    log("Proxy échoué : " + e);
                 }
             }
 
             if (!xml) {
                 conteneur.innerHTML = "<p>Impossible de charger la veille.</p>";
-                log("❌ Aucun proxy n'a fonctionné");
+                log("Aucun proxy n'a fonctionné");
                 return;
             }
 
