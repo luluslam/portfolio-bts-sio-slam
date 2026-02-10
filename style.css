@@ -7,6 +7,10 @@
 }
 
 /* --- Structure générale --- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -15,37 +19,29 @@ body {
   color: var(--texte);
 }
 
+/* Pour que l’ancre ne colle pas le haut */
+section {
+  scroll-margin-top: 20px;
+}
+
 /* --- Sidebar --- */
 .sidebar {
   width: 200px;
-  /* un peu plus fine */
   background: #fff;
   border-right: 1px solid var(--bordure);
-  height: 90vh;
-  /* légèrement plus petite que toute la hauteur */
+
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 20px;
+
   position: fixed;
   top: 4%;
   bottom: 4%;
-  height: auto;
-  /* centrée verticalement un peu */
   left: 20px;
-  /* petit espace à gauche */
-  border-radius: 16px;
-  /* effet carte */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  /* légère ombre élégante */
-}
 
-.profile-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
@@ -119,20 +115,16 @@ h1 {
   gap: 16px;
 }
 
-/* --- Sous-cartes compétences roses --- */
+/* --- Sous-cartes (compétences / objectif) --- */
 .subcard {
   background: #ffe6f7;
-  /* même fond que les cartes RSS */
   border-radius: 12px;
   padding: 18px;
   border: 1px solid #ffabed;
-  /* bordure rose foncé */
   box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25);
-  /* ombre rose douce */
   transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-/* Petit effet au survol */
 .subcard:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
@@ -150,7 +142,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* --- Boutons de contact --- */
+/* --- Boutons --- */
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -175,27 +167,91 @@ footer {
   color: #fff;
 }
 
-/* --- Version responsive --- */
-@media screen and (max-width: 900px) {
+/* --- Veille (cartes RSS) --- */
+.veille-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
 
-  /* La sidebar devient un bandeau en haut */
+.rss-card {
+  background: #ffe6f7;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ffabed;
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.rss-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
+}
+
+.rss-card a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.rss-card a:hover {
+  text-decoration: underline;
+  color: #ff37c9;
+}
+
+.rss-date {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: #6b0055;
+  margin: 6px 0 10px;
+}
+
+/* --- Certifications : bullets + bouton aligné --- */
+.certif-list {
+  padding-left: 20px;
+}
+
+.certif-list li {
+  margin-bottom: 10px;
+}
+
+.certif-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.certif-row span {
+  flex: 1;
+}
+
+.btn-certif {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  border-color: var(--rose);
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 900px) {
   .sidebar {
     position: relative;
     width: 100%;
-    height: auto;
     left: 0;
     top: 0;
+    bottom: auto;
+
     border-radius: 0;
     border-right: none;
     border-bottom: 1px solid var(--bordure);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     padding: 15px 10px;
   }
 
-  /* Texte profil centré */
   .profile h1 {
     font-size: 1rem;
     text-align: center;
@@ -206,9 +262,7 @@ footer {
     text-align: center;
   }
 
-  /* Menu horizontal et compact */
   .nav {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
@@ -220,138 +274,16 @@ footer {
     padding: 6px 10px;
   }
 
-  /* Contenu ajusté sous la barre */
   .main {
     margin-left: 0;
     padding: 20px;
   }
 
-  /* Cartes plus étroites */
   .card {
     padding: 16px 20px;
   }
 
-  /* Boutons centrés */
   .contact-buttons {
     justify-content: center;
   }
-}
-
-/* --- Tableau récapitulatif --- */
-.table-container {
-  overflow-x: auto;
-  margin-top: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid var(--bordure);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-table th {
-  background: var(--rose-fonce);
-  color: #fff;
-  text-align: left;
-  padding: 12px;
-  font-size: 0.95rem;
-}
-
-table td {
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--bordure);
-}
-
-table tr:nth-child(even) {
-  background: #fff8fd;
-}
-
-table tr:hover {
-  background: var(--rose);
-  color: #fff;
-}
-
-.veille-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-}
-
-/* ---- Cartes de la veille ---- */
-
-.rss-card {
-  background: #ffe6f7;
-  /* rose pastel */
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ffabed;
-  /* bordure rose foncé */
-  color: #1a1a1a;
-  box-shadow: 0 4px 12px rgba(255, 171, 237, 0.25);
-  /* ombre rose douce */
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-}
-
-.rss-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(255, 171, 237, 0.45);
-}
-
-/* Titre des articles */
-.rss-card a {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #000000;
-  /* rose saturé pour un bon contraste */
-  text-decoration: none;
-}
-
-.rss-card a:hover {
-  text-decoration: underline;
-  color: #ff37c9;
-  /* hover rose plus vif */
-}
-
-/* Date du flux */
-.rss-date {
-  font-size: 0.8rem;
-  opacity: 0.7;
-  color: #6b0055;
-  /* violet foncé */
-  margin: 6px 0 10px;
-}
-
-/* --- Certifications : bullets conservés + bouton aligné --- */
-
-.certif-list {
-  padding-left: 20px;
-}
-
-.certif-list li {
-  margin-bottom: 10px;
-}
-
-/* Conteneur interne en flex (PAS le li) */
-.certif-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-/* Le texte prend la largeur dispo */
-.certif-row span {
-  flex: 1;
-}
-
-/* Bouton plus petit et discret */
-.btn-certif {
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  border-color: var(--rose);
 }
