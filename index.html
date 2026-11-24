@@ -21,7 +21,7 @@
             <a href="#presentation" class="active">Présentation</a>
             <a href="#projets">Projets</a>
             <a href="#competences">Compétences</a>
-            <a href="#stage">Stage</a>
+            <a href="#stage">Stages</a>
             <a href="#contact">Contact</a>
         </nav>
     </aside>
@@ -31,7 +31,8 @@
         <section id="presentation" class="card">
             <h2>Présentation</h2>
             <p>
-                Étudiante en <strong>L3 Informatique - parcours MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises)</strong>,
+                Étudiante en <strong>L3 Informatique - parcours MIAGE (Méthodes Informatiques Appliquées à la Gestion
+                    des Entreprises)</strong>,
                 je me forme aux métiers du développement et de la conception d’applications.
                 Cette formation m’a permis d’acquérir des compétences solides en
                 <strong>programmation, bases de données, conception UML/Merise</strong>.
@@ -50,7 +51,7 @@
                 <p>
                     Ce portfolio a pour objectif de présenter l’ensemble de mes
                     <strong>réalisations, projets et compétences</strong> acquises au cours de mon parcours scolaire.
-                   Il me permet de démontrer ma capacité à
+                    Il me permet de démontrer ma capacité à
                     <strong>concevoir, développer, sécuriser et maintenir
                         des applications</strong>, ainsi qu’à m’intégrer dans un environnement professionnel.
                 </p>
@@ -76,7 +77,8 @@
                 <br>
 
                 <li>
-                    <strong>Projet de cours BTS SIO (Services Informatiques aux Organisations) : GSB comptes-rendus </strong> - Développement d’une application web de
+                    <strong>Projet de cours BTS SIO (Services Informatiques aux Organisations) : GSB comptes-rendus
+                    </strong> - Développement d’une application web de
                     gestion et de
                     consultation des données médicales, avec gestion des rôles utilisateurs (visiteur, délégué,
                     responsable),
@@ -84,26 +86,28 @@
                     rapports de visite, aux praticiens et aux médicaments, selon le profil de l'utilisateur.
                 </li>
 
-                <div class="contact-buttons">
+                <!--<div class="contact-buttons">-->
                     <!-- Bouton permettant de consulter le détail du projet GSB comptes-rendus -->
-                    <a href="assets/projets/Détails projet GSB comptes-rendus.pdf" target="_blank" class="btn">
+                    <!--<a href="assets/projets/Détails projet GSB comptes-rendus.pdf" target="_blank" class="btn">
                         Détails du projet GSB comptes-rendus </a>
-                </div>
+                </div>-->
 
                 <br>
 
                 <li>
-                    <strong>Projet de cours BTS SIO (Services Informatiques aux Organisations) : GSB paramédical </strong> - Développement d’une application web de gestion
+                    <strong>Projet de cours BTS SIO (Services Informatiques aux Organisations) : GSB paramédical
+                    </strong> - Développement d’une application web de gestion
                     et de
                     consultation des produits pharmaceutiques, avec gestion des rôles utilisateurs (admin, client),
                     permettant l’accès différencié aux produits selon le profil de l'utilisateur.
                 </li>
 
-                <div class="contact-buttons">
+                
+                <!--<div class="contact-buttons">-->
                     <!-- Bouton permettant de consulter le détail du projet GSB paramédical -->
-                    <a href="assets/projets/Détails projet GSB Param.pdf" target="_blank" class="btn">
+                    <!--<a href="assets/projets/Détails projet GSB Param.pdf" target="_blank" class="btn">
                         Détails du projet GSB paramédical </a>
-                </div>
+                </div>-->
 
             </ul>
         </section>
@@ -178,11 +182,14 @@
                 documentation technique.
             </p>
 
-            <div class="contact-buttons">
-                <!-- Bouton permettant de consulter le compte rendu du stage de première année -->
-                <a href="assets/stage/Compte rendu de stage - SIO1 2024-2025.pdf" target="_blank" class="btn"> Compte
+
+
+            <!-- <div class="contact-buttons"> -->
+            <!-- Bouton permettant de consulter le compte rendu du stage de première année -->
+            <!--<a href="assets/stage/Compte rendu de stage - SIO1 2024-2025.pdf" target="_blank" class="btn"> Compte
                     rendu du stage de première année </a>
             </div>
+        -->
 
             <br>
 
@@ -228,11 +235,12 @@
                 documentation technique.
             </p>
 
-            <div class="contact-buttons">
-                <!-- Bouton permettant de consulter le compte rendu du stage de dexième année -->
-                <a href="assets/stage/Compte rendu de stage - SIO2 2025-2026.pdf" target="_blank" class="btn"> Compte
+            <!--<div class="contact-buttons">-->
+            <!-- Bouton permettant de consulter le compte rendu du stage de dexième année -->
+            <!--<a href="assets/stage/Compte rendu de stage - SIO2 2025-2026.pdf" target="_blank" class="btn"> Compte
                     rendu du stage de deuxième année </a>
             </div>
+        -->
 
         </section>
 
@@ -254,111 +262,6 @@
             © <span id="year"></span> Luna MEHDI — Portfolio BTS SIO SLAM
         </footer>
     </main>
-
-    <script>
-
-        // Met à jour l'année dans le footer
-        document.getElementById("year").textContent = new Date().getFullYear();
-
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav a");
-
-        // Fonction qui met à jour le lien actif selon la position du scroll
-        window.addEventListener("scroll", () => {
-            let current = "";
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 150; // Marge avant détection
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id");
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${current}`) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
-
-    <script>
-        async function chargerVeille() {
-            const conteneur = document.getElementById("veille-container");
-
-            const articles = [
-                {
-                    titre: "Google muscle la sécurité de Drive avec un moteur IA entraîné sur des millions de ransomwares",
-                    lien: "https://www.usine-digitale.fr/article/google-muscle-la-securite-de-drive-avec-un-moteur-ia-entraine-sur-des-millions-de-ransomwares.N2238650",
-                    date: "2025-09-30",
-                    texte: "La firme de Mountain View renforce la sécurité de Drive, son service de stockage et de synchronisation de fichiers dans le cloud, en intégrant un moteur d'IA capable de détecter en temps réel les comportements typiques d'une attaque par ransomware. "
-                },
-                {
-                    titre: "Ransomwares : 83% des organisations ayant payé une rançon ont été de nouveau attaquées",
-                    lien: "https://www.usine-digitale.fr/editorial/ransomwares-83-des-organisations-ayant-paye-une-rancon-ont-ete-de-nouveau-attaquees.N2239969",
-                    date: "2025-10-22",
-                    texte: "Le paiement d'une rançon après un ransomware ne résout rien, rappelle CrowdStrike dans son dernier rapport sur ce type d'attaques. Près de la moitié des entreprises interrogées n'ont en outre pas pu restaurer l'intégralité de leurs données après avoir payé une rançon."
-
-                },
-                {
-                    titre: "Google poursuit en justice un groupe de hackers chinois accusés de vendre un kit de phishing par SMS ayant permis de voler un milliard de dollars",
-                    lien: "https://www.usine-digitale.fr/article/google-poursuit-en-justice-un-groupe-de-hackers-chinois-accuses-de-vendre-un-kit-de-phishing-par-sms-ayant-permis-de-voler-un-milliard-de-dollars.N2241321",
-                    date: "2025-11-13",
-                    texte: "25 personnes sont soupçonnées par Google d'appartenir à un groupe commercialisant la plateforme Lighthouse. Celle-ci fournit, clé en main, à des cybercriminels, des SMS frauduleux et de faux sites web permettant de dérober les informations financières de milliers de particuliers à travers le monde."
-                },
-                {
-                    titre: "Cyberattaque : La plateforme de téléconsultation MédecinDirect victime d’une fuite de données, 285 000 personnes touchées",
-                    lien: "https://www.usine-digitale.fr/cybersecurite/data-breach/cyberattaque-la-plateforme-de-teleconsultation-medecindirect-victime-dune-fuite-de-donnees-285-000-personnes-touchees.LOTZGYSVMBBADL36YQZFDM2XAQ.html",
-                    date: "2025-12-08",
-                    texte: "La société MédecinDirect, éditeur d’un logiciel de téléconsultation, a été victime d’une fuite de données. Près de 285 000 personnes sont touchées."
-                },
-                {
-                    titre: "La Cnil inflige une amende de 42 millions d’euros à Free et Free Mobile après une fuite massive de données",
-                    lien: "https://www.usine-digitale.fr/cybersecurite/cybersecurite-la-cnil-inflige-une-amende-de-42-millions-deuros-a-free-et-free-mobile-apres-une-fuite-massive-de-donnees.D4NUEZQVVNH5HHETK7CXY2ULWU.html",
-                    date: "2026-01-14",
-                    texte: "La Cnil a sanctionné Free et Free Mobile après une cyberattaque découverte en octobre 2024. L’autorité pointe plusieurs manquements au RGPD, liés notamment à la sécurité des systèmes d’information et à la gestion des données personnelles."
-                },
-                {
-                    titre: "La plateforme de recrutement Choisir le Service Public frappée par une cyberattaque via un compte gestionnaire",
-                    lien: "https://www.usine-digitale.fr/cybersecurite/les-donnees-de-377-418-candidats-mises-en-vente-la-plateforme-de-recrutement-choisir-le-service-public-frappee-par-une-cyberattaque-via-un-compte-gestionnaire.ZTA4AUQNOFFYJHP3MBABOOLO4Y.html",
-                    date: "2026-02-18",
-                    texte: "Le groupe a vu les données personnelles de 377 418 candidats exposées, puis mises en vente sur le dark net après l’utilisation frauduleuse d’un compte gestionnaire."
-                },
-                {
-                    titre: "Cyberattaques : 80% des entreprises françaises admettent ne pas être prêtes alors que la menace s’industrialise",
-                    lien: "https://www.usine-digitale.fr/cybersecurite/les-donnees-de-377-418-candidats-mises-en-vente-la-plateforme-de-recrutement-choisir-le-service-public-frappee-par-une-cyberattaque-via-un-compte-gestionnaire.ZTA4AUQNOFFYJHP3MBABOOLO4Y.html",
-                    date: "2026-03-26",
-                    texte: "Plus de 500 000 demandes d’assistance, une hausse de 20% en un an et des millions de Français exposés. Derrière la montée en puissance du dispositif d’aide “Cybermalveillance.gouv.fr”, le constat est sans appel : la menace s’industrialise, mais la préparation des entreprises reste largement insuffisante."
-                },
-                {
-                    titre: "Vos PDFs peuvent vous espionner : cette faille cachée dans Adobe Reader que les hackers exploitent depuis 4 mois",
-                    lien: "https://www.usine-digitale.fr/cybersecurite/vos-pdfs-peuvent-vous-espionner-cette-faille-cachee-dans-adobe-reader-que-les-hackers-exploitent-depuis-4-mois.GXOLW2GGT5AVJLFHAYNHO7GYEQ.html",
-                    date: "2026-04-18",
-                    texte: "Pendant plusieurs mois, une faille critique dans les lecteurs PDF d’Adobe a permis à des hackers de compromettre des ordinateurs à distance via un simple document piégé. Exploitée depuis fin 2025, cette vulnérabilité, désormais corrigée, pouvait conduire à une prise de contrôle complète des systèmes."
-                }
-
-
-            ];
-
-            articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            conteneur.innerHTML = "";
-
-            articles.forEach(a => {
-                conteneur.innerHTML += `
-                <div class="rss-card">
-                    <a href="${a.lien}" target="_blank">${a.titre}</a>
-                    <p class="rss-date">${new Date(a.date).toLocaleDateString("fr-FR")}</p>
-                    <p>${a.texte}</p>
-                </div>
-            `;
-            });
-        }
-
-        chargerVeille();
-    </script>
 
 </body>
 
